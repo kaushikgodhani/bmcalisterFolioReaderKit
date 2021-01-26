@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FolioReaderKit
+import NFolioReaderKit
 
 class ViewController: UIViewController {
 
