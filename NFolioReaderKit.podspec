@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
   s.platform      = :ios, '9.0'
   s.requires_arc  = true
-
+  s.ios.deployment_target  = '9.0'
   s.source_files = [
     'Source/*.{h,swift}',
     'Source/**/*.swift',
@@ -27,13 +27,16 @@ Pod::Spec.new do |s|
     'Source/Resources/Fonts/**/*.{otf,ttf}'
   ]
   s.public_header_files = 'Source/*.h'
-
+  s.pod_target_xcconfig = {
+    'PRODUCT_BUNDLE_IDENTIFIER': 'io.mca.nfolioreaderkit'
+  } 
   s.libraries  = "z"
   s.dependency 'SSZipArchive', '2.1.1'
   s.dependency 'MenuItemKit', '3.1.3'
   s.dependency 'ZFDragableModalTransition', '0.6'
   s.dependency 'AEXML', '4.3.3'
   s.dependency 'FontBlaster', '4.1.0'
-  s.dependency 'RealmSwift', '5.4.8'
+  s.dependency 'RealmSwift', '10.5.1'
+  s.dependency 'Realm', '10.5.1'
 
 end
